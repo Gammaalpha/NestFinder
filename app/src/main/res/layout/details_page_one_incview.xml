@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout
+            android:id="@+id/location_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/one_sided_border_editfield"
+            android:backgroundTint="@color/lightpurple"
+            android:orientation="vertical"
+            android:paddingBottom="35dp"
+            android:paddingLeft="20dp"
+            android:paddingTop="10dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Location"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="8dp"
+                android:text="27 bridport"
+                android:textColor="@color/white"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="20dp"
+            android:paddingTop="20dp"
+            android:background="@drawable/one_sided_border_editfield"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:textStyle=""
+                android:text="Price"/>
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:paddingTop="5dp"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:text="$200/week"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_invisible_main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_anchor="@id/location_view"
+        app:fabSize="normal"
+        android:layout_margin="@dimen/fab_margin"
+        app:layout_anchorGravity="bottom|end" />
+
+
+</android.support.v4.widget.NestedScrollView>

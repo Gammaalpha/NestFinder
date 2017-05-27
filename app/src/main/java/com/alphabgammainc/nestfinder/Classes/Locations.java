@@ -7,11 +7,13 @@ import android.widget.ImageView;
 import com.alphabgammainc.nestfinder.MapsActivity;
 import com.squareup.picasso.Picasso;
 
+import java.io.Serializable;
+import java.util.ArrayList;
+
 /**
  * Created by davidhuang on 2017-04-25.
  */
-
-public class Locations {
+public class Locations implements Serializable{
     private Double lon;
     private Double lat;
     private String adTitle;
@@ -19,7 +21,7 @@ public class Locations {
     private int bathRooms;
     private boolean isFurnished;
     private boolean pets;
-    private String rentImage;
+    private ArrayList<String> rentImage;
     private Double price;
     private String address;
     private Address mAddress;
@@ -29,12 +31,13 @@ public class Locations {
 
     }
 
-    public Locations(Double lon, Double lat,String adTitle,Address mAddress,
+    public Locations(Double lon, Double lat,String adTitle,Address mAddress,ArrayList<String> images,
                      int bedRooms,int bathRooms, boolean isFurnished,boolean pets,Double price, String description){
         this.lon = lon;
         this.lat = lat;
         this.adTitle = adTitle;
         this.mAddress=mAddress;
+        this.rentImage =images;
         this.bedRooms=bedRooms;
         this.bathRooms =bathRooms;
         this.isFurnished =isFurnished;
@@ -70,11 +73,16 @@ public class Locations {
         this.lat = lat;
     }
 
-    public String getRentImage() {
+    public ArrayList<String> getRentImage() {
         return rentImage;
     }
 
-    public void setRentImage(String rentImage) {
+    public void pushBackImage(String key){
+        if(rentImage == null)rentImage  = new ArrayList<>();
+        rentImage.add(key);
+    }
+
+    public void setRentImage(ArrayList<String> rentImage) {
         this.rentImage = rentImage;
     }
 

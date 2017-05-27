@@ -3,12 +3,15 @@
     <string name="title_activity_maps">Map</string>
     <string name="upload_image">Upload Image</string>
     <string name="ad_posting_name">Ad Post Manager</string>
-
+    <string name="ad_details_maanger">Details Manager</string>
+    <string name="action_settings">Settings</string>
 
     <!-- Start user interaction text -->
     <string name="ad_post_welcome">Tell us a little bit about the place!</string>
     <string name="ad_post_second_page">Where is it?</string>
     <string name="ad_post_third_page">Last thing.</string>
+    <string name="ad_post_fourth_page">Add some pictures</string>
+
 
     <!-- END-->
     <!-- Hints Start Hint -->
@@ -21,4 +24,87 @@
     <string name="ad_city">City</string>
 
     <!-- End Hints -->
+
+    <!-- Start of ad details -->
+    <string name="ad_display_details">Details</string>
+    <!-- END of ad details-->
+
+        <!-- ad creation strings  -->
+        <string name="ad_creation_one">Basic Information</string>
+        <string name="ad_creation_two">Where is it?</string>
+        <string name="ad_creation_three">Where is it?</string>
+        <string name="ad_creation_four">How about some Images?</string>
+
+        <!-- ad creation province/state, canada/usa-->
+
+        <string-array name="country">
+            <item>Country</item>
+            <item>CANADA</item>
+            <item>UNITED STATES</item>
+        </string-array>
+
+        <string-array name="province">
+            <item>Province</item>
+            <item>Alberta(AB)</item>
+            <item>British Columbia (BC)</item>
+            <item>Manitoba (MB)</item>
+            <item>New Brunswick (NB)</item>
+            <item>Newfoundland and Labdrador (NL)</item>
+            <item>Northwest Territories (NT)</item>
+            <item>Nova Scotia (NS)</item>
+            <item>Nunavut (NU)</item>
+            <item>Ontario (ON)</item>
+            <item>Prince Edward Island (PE)</item>
+            <item>Quebec (QC)</item>
+            <item>Saskatchewan (SK)</item>
+            <item>Yukon (YT)</item>
+        </string-array>
+        <string-array name="states">
+            <item>State</item>
+            <item>Alabama</item>
+            <item>Alaska</item>
+            <item>Arizona</item>
+            <item>Arkansas</item>
+            <item>California</item>
+            <item>Colorado</item>
+            <item>Connecticut</item>
+            <item>Delaware</item>
+            <item>Florida</item>
+            <item>Georgia</item>
+            <item>Hawaii</item>
+            <item>Idaho</item>
+            <item>Illinois</item>
+            <item>Indiana</item>
+            <item>Iowa</item>
+            <item>Kansas</item>
+            <item>Kentucky</item>
+            <item>Louisiana</item>
+            <item>Maine</item>
+            <item>Maryland</item>
+            <item>Massachusetts</item>
+            <item>Michigan</item>
+            <item>Minnesota</item>
+            <item>Mississippi</item>
+            <item>Missouri</item>
+            <item>Montana</item>
+            <item>Nebraska</item>
+            <item>Nevada</item>
+            <item>New Hampshire</item>
+            <item>New Jersey</item>
+            <item>New Mexico</item>
+            <item>New York</item>
+            <item>North Carolina</item>
+            <item>North Dakota</item>
+            <item>Ohio</item>
+            <item>Oklahoma</item>
+            <item>Oregon</item>
+            <item>Pennsylvania</item>
+            <item>Rhode Island</item>
+        </string-array>
+        <!-- end -->
+
+    <!-- end -->
+
+
+
 </resources>

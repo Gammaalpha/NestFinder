@@ -1,18 +1,12 @@
 package com.alphabgammainc.nestfinder.Utilities.FabManager;
 
 import android.app.Activity;
-import android.app.FragmentManager;
 import android.content.Intent;
 import android.support.design.widget.FloatingActionButton;
 import android.view.View;
 
-import com.alphabgammainc.nestfinder.FrontPage.FrontPage;
 import com.alphabgammainc.nestfinder.Landlord.AdPostingManager;
-import com.alphabgammainc.nestfinder.Landlord.AdPostingPage;
-import com.alphabgammainc.nestfinder.MapsActivity;
 import com.alphabgammainc.nestfinder.R;
-
-import java.util.ArrayList;
 
 /**
  * Created by davidhuang on 2017-05-06.

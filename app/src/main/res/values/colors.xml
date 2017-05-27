@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#dc41f4</color>
-    <color name="colorPrimaryDark">#c441f4</color>
+    <color name="colorPrimary">#00ADFF</color>
+    <color name="colorPrimaryDark">#0079B2</color>
     <color name="colorAccent">#FF4081</color>
     <color name="white">#ffffff</color>
-    <color name="purple">#c441f4</color>
+    <color name="purple">#0079B2</color>
     <color name="grey">#E8E8E8</color>
     <color name="black">#000000</color>
-    <color name="lightpurple">#dc41f4</color>
+    <color name="lightpurple">#00ADFF</color>
     <color name="greyOpac">#66E8E8E8</color>
-    <color name="lightpurpleOpac">#66dc41f4</color>
+    <color name="lightpurpleOpac">#19B5FF</color>
     <color name="darkgray">#999999</color>
-
+    <color name="darkblue">#0A17B2</color>
 </resources>

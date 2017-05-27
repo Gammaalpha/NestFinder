@@ -6,48 +6,94 @@
     android:layout_height="wrap_content"
     android:background="@drawable/one_sided_border_bottom"
     android:orientation="horizontal"
-    android:weightSum="1">
+>
 
-    <ImageView
-        android:id="@+id/image"
-        android:layout_width="120dp"
-        android:layout_height="match_parent"
-        android:layout_rowSpan="3"
-        />
 
-    <LinearLayout
+    <TableLayout
         android:layout_width="match_parent"
-        android:layout_height="125dp"
-        android:orientation="horizontal">
+        android:layout_height="wrap_content">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:weightSum="1">
+        <TableRow>
 
-            <TextView
-                android:id="@+id/location"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.41"
-                android:text="HELLO WORLD"
-                android:textColor="@color/white"
-                android:textSize="30sp"
-                android:textStyle="bold"
+
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:minHeight="100dp"
+                android:layout_weight=".3"
                 />
 
-            <TextView
-                android:id="@+id/price"
-                android:layout_width="193dp"
+
+
+            <LinearLayout
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="0.28"
-                android:ellipsize="marquee"
-                android:text="HELLO WORLD"
-                android:textColor="@color/white"
-                android:textSize="20sp"
-                android:textStyle="bold"
+                android:id="@+id/show_marker"
+                android:layout_weight=".5"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:typeface="sans"
+                    android:text="Location"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    />
+                <TextView
+                    android:id="@+id/location"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:typeface="sans"
+                    android:layout_marginLeft="10dp"
+                    android:text="HELLO WORLD"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:typeface="sans"
+                    android:text="Price"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    />
+                <TextView
+                    android:id="@+id/price"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="marquee"
+                    android:text="HELLO WORLD"
+                    android:typeface="sans"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    />
+
+            </LinearLayout>
+
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/three_dots"
+                android:layout_weight=".2"
+                android:id="@+id/show_detils"
+                android:onClick="showPopUp"
                 />
-        </LinearLayout>
-    </LinearLayout>
+
+
+
+        </TableRow>
+
+    </TableLayout>
+
+
+
 </LinearLayout>

@@ -14,9 +14,7 @@
         android:background="@drawable/create_ad_next_button"
         android:layout_marginTop="40dp"
         android:backgroundTint="@color/lightpurple"
-        android:layout_below="@+id/remember_me"
-        android:layout_alignStart="@+id/userPassword"
-        android:layout_alignEnd="@+id/userPassword" />
+        android:layout_below="@+id/remember_me" />
 
 
 

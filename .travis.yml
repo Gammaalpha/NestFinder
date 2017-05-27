@@ -1,0 +1,13 @@
+language: android
+jdk: oraclejdk8
+sudo: false
+
+notifications:  
+    email:
+        - Huangdavidd@gmail.com
+env:
+  matrix:
+    - ANDROID_TARGET=android-19 ANDROID_ABI=armeabi-v7a
+    - ANDROID_TARGET=android-25 ANDROID_ABI=armeabi-v7a
+  global:   #Optional 
+    - ADB_INSTALL_TIMEOUT=10    #Time out to 10 mins

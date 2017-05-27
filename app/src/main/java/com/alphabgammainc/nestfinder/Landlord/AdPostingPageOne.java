@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.EditText;
 
 import com.alphabgammainc.nestfinder.Classes.Locations;
+import com.alphabgammainc.nestfinder.MapsActivity;
 import com.alphabgammainc.nestfinder.R;
 
 /**
@@ -36,7 +37,8 @@ public class AdPostingPageOne extends Fragment implements View.OnClickListener, 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
-
+        //((AdPostingManager)mActivity).getSupportActionBar().hide();
+        ((AdPostingManager)mActivity).setTitle(R.string.ad_creation_one);
         mView = inflater.inflate(R.layout.ad_posting_page_one, container, false);
 
         adTitle = (EditText) mView.findViewById(R.id.adTitle);
@@ -63,7 +65,7 @@ public class AdPostingPageOne extends Fragment implements View.OnClickListener, 
                 location.setDescription(adDescriptionString.trim());
                 location.setPrice(Double.parseDouble(adPriceString));
 
-                ((AdPostingManager)mActivity).setLocation(location);
+              //  ((AdPostingManager)mActivity).setLocation(location);
                 ((AdPostingManager)mActivity).nextView(1);
 
             }

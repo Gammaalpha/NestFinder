@@ -33,6 +33,34 @@ import java.io.ByteArrayOutputStream;
 public class ImageManager {
 
 
+
+    public static void uploadImageWithBitMap(Bitmap file, String key){
+        ByteArrayOutputStream stream = new ByteArrayOutputStream();
+        file.compress(Bitmap.CompressFormat.JPEG, 100, stream);
+        byte[] bytes = stream.toByteArray();
+
+        FirebaseStorage storage = FirebaseStorage.getInstance();
+
+
+        StorageReference storageRef = storage.getReferenceFromUrl("gs://nestfinder-ab9ff.appspot.com/Homes");
+        StorageReference ImageRef = storageRef.child(key);
+
+
+        UploadTask uploadTask = ImageRef.putBytes(bytes);
+        uploadTask.addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception exception) {
+
+            }
+        }).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+            @Override
+            public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+
+                System.out.println("Image has sucessfully been uploaded");
+            }
+        });
+    }
+
     public static void uploadImage(String file,String key, final ImageCallBack callBack ){
         final BitmapFactory.Options options = new BitmapFactory.Options();
         final Bitmap bitMap = BitmapFactory.decodeFile(file, options);

@@ -28,13 +28,13 @@ public class AdPostingPageThree extends Fragment implements View.OnClickListener
     private Activity mActivity;
     // probably put this into a resource file
 
-    String[] countryList = {
+   /* String[] countryList = {
             "Country",
             "Canada",
             "UNITED STATES"
-    };
+    };*/
 
-    String[] provinceList = {
+   /* String[] provinceList = {
             "Province",
             "Alberta (AB)",
             "British Columbia (BC)",
@@ -48,9 +48,10 @@ public class AdPostingPageThree extends Fragment implements View.OnClickListener
             "Prince Edward Island (PE)",
             "Quebec (QC)",
             "Saskatchewan (SK)",
-            "Yukon (YT)}"};
+            "Yukon (YT)"
+    };*/
 
-    String [] statesList = {
+   /* String [] statesList = {
             "States",
             "Alabama",
             "Alaska",
@@ -102,7 +103,7 @@ public class AdPostingPageThree extends Fragment implements View.OnClickListener
             "West Virginia",
             "Wisconsin",
             "Wyoming"
-    };
+    };*/
 
     private Spinner adProvinceState;
     private EditText adCity;
@@ -117,13 +118,15 @@ public class AdPostingPageThree extends Fragment implements View.OnClickListener
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
+        ((AdPostingManager)mActivity).setTitle(R.string.ad_creation_three);
+
         mView = inflater.inflate(R.layout.ad_posting_page_three, container, false);
 
 
         adProvinceState = (Spinner)mView.findViewById(R.id.adProvince);
         adCountry = (Spinner)mView.findViewById(R.id.adCountry);
 
-        ArrayAdapter<String> countryAdapter = new ArrayAdapter<String>(mActivity, android.R.layout.simple_spinner_dropdown_item, countryList);
+        ArrayAdapter<String> countryAdapter = new ArrayAdapter<String>(mActivity, android.R.layout.simple_spinner_dropdown_item, getResources().getStringArray(R.array.country));
 
         adCountry.setAdapter(countryAdapter);
 
@@ -135,10 +138,10 @@ public class AdPostingPageThree extends Fragment implements View.OnClickListener
                     adProvinceState.setAdapter(emptyAdapter);
 
                 } else if( position == 1) {
-                    ArrayAdapter<String> provinceAdapter = new ArrayAdapter<String>(mActivity, android.R.layout.simple_spinner_dropdown_item, provinceList);
+                    ArrayAdapter<String> provinceAdapter = new ArrayAdapter<String>(mActivity, android.R.layout.simple_spinner_dropdown_item, getResources().getStringArray(R.array.province));
                     adProvinceState.setAdapter(provinceAdapter);
                 } else if( position == 2){
-                    ArrayAdapter<String> provinceAdapter = new ArrayAdapter<String>(mActivity, android.R.layout.simple_spinner_dropdown_item, statesList);
+                    ArrayAdapter<String> provinceAdapter = new ArrayAdapter<String>(mActivity, android.R.layout.simple_spinner_dropdown_item, getResources().getStringArray(R.array.states));
                     adProvinceState.setAdapter(provinceAdapter);
                 }
             }
@@ -152,8 +155,6 @@ public class AdPostingPageThree extends Fragment implements View.OnClickListener
         adCity = (EditText)mView.findViewById(R.id.adCity);
 
         mView.findViewById(R.id.nextpage).setOnClickListener(this);
-
-
         return mView;
     }
 
@@ -161,13 +162,24 @@ public class AdPostingPageThree extends Fragment implements View.OnClickListener
     public void onClick(View v) {
         if(v.getId() == R.id.nextpage){
             String adPostingCityString = adCity.getText().toString();
-            int pos = adProvinceState.getSelectedItemPosition();
+            int provpos = adProvinceState.getSelectedItemPosition();
+            int countrypos = adCountry.getSelectedItemPosition();
 
-            if(AdPostingValidation.checkForEmptyString(adPostingCityString) && pos != 0) {
+            if(AdPostingValidation.checkForEmptyString(adPostingCityString) && provpos != 0 && countrypos!= 0) {
                 // validate, store info then call back.
                 // create some error feedback
                 //Address address = ((AdPostingManager)mActivity).getAddress();
                // address.setCity();
+                Address address = ((AdPostingManager)mActivity).getAddress();
+                address.setCountry(adCountry.getSelectedItem().toString());
+                address.setProvince(adProvinceState.getSelectedItem().toString());
+                address.setCity(adPostingCityString);
+             //   ((AdPostingManager)mActivity).setAddress(address);
+
+                ((AdPostingManager)mActivity).nextView(3);
+                /**
+                 * @// TODO: 2017-05-16 Implement the existing Google services to the modified views
+                 */
             }
         }
     }

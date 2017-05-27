@@ -8,10 +8,21 @@
          location permissions for the 'MyLocation' functionality. 
     -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-feature android:name="android.hardware.camera2 " android:required="false"/>
+    <uses-feature
+        android:name="android.software.leanback"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.touchscreen"
+        android:required="false" />
+    >
 
     <application
         android:allowBackup="true"
@@ -44,7 +55,17 @@
             </intent-filter>
         </activity>
         <activity android:label="@string/ad_posting_name" android:name=".Landlord.AdPostingManager"/>
+        <activity android:label="@string/ad_details_maanger" android:name=".DetailsPage.DetailsPage"/>
 
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.alphabgammainc.nestfinder.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_path"></meta-data>
+        </provider>
     </application>
 
 </manifest>

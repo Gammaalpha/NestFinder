@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    tools:showIn="@layout/details_page"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.google.android.gms.maps.MapView
+                android:id="@+id/map"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                class="com.google.android.gms.maps.SupportMapFragment"
+                />
+            <android.support.design.widget.CoordinatorLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                        android:orientation="vertical">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:background="@drawable/one_sided_border_top"
+                                android:backgroundTint="@color/lightpurple"
+                                android:layout_height="wrap_content">
+                                <TableLayout
+                                    android:layout_width="match_parent"
+                                    android:paddingBottom="30dp"
+                                    android:paddingTop="10dp"
+                                    android:id="@+id/legend"
+                                    android:layout_height="wrap_content">
+
+                                    <TableRow
+                                        android:paddingLeft="20dp"
+                                        android:paddingBottom="20dp">
+                                        <TextView
+                                            android:textColor="@color/white"
+                                            android:text="Legend"
+                                            android:textSize="25sp"/>
+
+                                    </TableRow>
+
+                                    <TableRow
+                                        android:paddingLeft="20dp">
+                                        <LinearLayout
+                                            android:layout_height="wrap_content"
+                                            android:layout_width="wrap_content"
+                                            android:layout_weight=".5"
+                                            >
+                                            <ImageView
+                                                android:layout_width="25dp"
+                                                android:layout_height="25dp"
+
+                                                app:srcCompat="@android:drawable/ic_dialog_email"
+                                                />
+                                            <TextView android:layout_width="wrap_content"
+                                                android:paddingLeft="10dp"
+                                                android:layout_height="wrap_content"
+                                                android:textColor="@color/white"
+                                                android:text="Gas Station"/>
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:layout_height="wrap_content"
+                                            android:layout_width="wrap_content"
+                                            android:layout_weight=".5"
+                                            >
+                                            <ImageView
+                                                android:layout_width="25dp"
+                                                android:layout_height="25dp"
+                                                app:srcCompat="@android:drawable/ic_dialog_email"
+                                                />
+                                            <TextView android:layout_width="wrap_content"
+                                                android:paddingLeft="10dp"
+                                                android:layout_height="wrap_content"
+                                                android:textColor="@color/white"
+                                                android:text="Grocery Store"/>
+                                        </LinearLayout>
+                                    </TableRow>
+
+                                    <TableRow
+                                        android:paddingLeft="20dp"
+                                        android:paddingTop="10dp">
+                                        <LinearLayout
+                                            android:layout_height="wrap_content"
+                                            android:layout_width="wrap_content"
+                                            android:layout_weight=".5"
+                                            >
+                                            <ImageView
+                                                android:layout_width="25dp"
+                                                android:layout_height="25dp"
+
+                                                app:srcCompat="@android:drawable/ic_dialog_email"
+                                                />
+                                            <TextView android:layout_width="wrap_content"
+                                                android:paddingLeft="10dp"
+                                                android:textColor="@color/white"
+                                                android:layout_height="wrap_content"
+                                                android:text="Schools"/>
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:layout_height="wrap_content"
+                                            android:layout_width="wrap_content"
+                                            android:layout_weight=".5"
+                                            >
+                                            <ImageView
+                                                android:layout_width="25dp"
+                                                android:layout_height="25dp"
+                                                app:srcCompat="@android:drawable/ic_dialog_email"
+                                                />
+                                            <TextView android:layout_width="wrap_content"
+                                                android:paddingLeft="10dp"
+                                                android:textColor="@color/white"
+                                                android:layout_height="wrap_content"
+                                                android:text="Bus Stops"/>
+                                        </LinearLayout>
+                                    </TableRow>
+                                    <TableRow
+                                        android:paddingLeft="20dp"
+                                        android:paddingTop="10dp">
+                                        <LinearLayout
+                                            android:layout_height="wrap_content"
+                                            android:layout_width="wrap_content"
+                                            android:layout_weight=".5"
+                                            >
+                                            <ImageView
+                                                android:layout_width="25dp"
+                                                android:layout_height="25dp"
+
+                                                app:srcCompat="@android:drawable/ic_dialog_email"
+                                                />
+                                            <TextView android:layout_width="wrap_content"
+                                                android:paddingLeft="10dp"
+                                                android:textColor="@color/white"
+                                                android:layout_height="wrap_content"
+                                                android:text="Convenience Stores"/>
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:layout_height="wrap_content"
+                                            android:layout_width="wrap_content"
+                                            android:layout_weight=".5"
+                                            >
+                                            <ImageView
+                                                android:layout_width="25dp"
+                                                android:layout_height="25dp"
+                                                app:srcCompat="@android:drawable/ic_dialog_email"
+                                                />
+                                            <TextView android:layout_width="wrap_content"
+                                                android:paddingLeft="10dp"
+                                                android:textColor="@color/white"
+                                                android:layout_height="wrap_content"
+                                                android:text="Bike Routes"/>
+                                        </LinearLayout>
+                                    </TableRow>
+
+                                </TableLayout>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/location_view"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/one_sided_border_editfield"
+                                android:orientation="vertical"
+                                android:paddingBottom="@dimen/detials_layout_container"
+                                android:paddingLeft="@dimen/detials_layout_container"
+                                android:paddingTop="@dimen/detials_layout_container">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+                                    <ImageView
+                                        android:layout_width="@dimen/details_image_width"
+                                        android:layout_height="@dimen/details_image_height"
+                                        android:layout_gravity="center_vertical"
+                                        android:src="@drawable/home"/>
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:paddingLeft="20dp"
+                                        android:orientation="vertical">
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:text="Location"
+                                            android:textColor="@color/darkgray"
+                                            android:textSize="@dimen/details_header_size"
+                                            />
+
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:paddingTop="8dp"
+                                            android:text="27 bridport"
+                                            android:textSize="@dimen/details_size"
+                                            />
+
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingLeft="@dimen/detials_layout_container"
+                                android:id="@+id/price"
+                                android:paddingTop="@dimen/detials_layout_container"
+                                android:paddingBottom="@dimen/detials_layout_container"
+                                android:background="@drawable/one_sided_border_editfield"
+                                android:orientation="vertical">
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+                                <ImageView
+                                    android:layout_width="@dimen/details_image_width"
+                                    android:layout_height="@dimen/details_image_height"
+                                    android:layout_gravity="center_vertical"
+                                    android:src="@drawable/coin"/>
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:paddingLeft="@dimen/detials_layout_container"
+                                    android:orientation="vertical">
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:textSize="@dimen/details_header_size"
+                                            android:textColor="@color/darkgray"
+                                            android:text="Price"/>
+
+                                        <TextView
+                                            android:layout_height="wrap_content"
+                                            android:layout_width="match_parent"
+                                            android:layout_weight="1"
+                                            android:paddingTop="5dp"
+                                            android:textSize="@dimen/details_size"
+                                            android:text="$200/week"
+                                            />
+                                    </LinearLayout>
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingLeft="@dimen/detials_layout_container"
+                                android:paddingTop="@dimen/detials_layout_container"
+                                android:paddingBottom="@dimen/detials_layout_container"
+                                android:background="@drawable/one_sided_border_editfield"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="@dimen/details_header_size"
+                                    android:textColor="@color/darkgray"
+                                    android:text="Price"/>
+
+                                <TextView
+                                    android:layout_height="wrap_content"
+                                    android:layout_width="match_parent"
+                                    android:layout_weight="1"
+                                    android:paddingTop="5dp"
+
+                                    android:textSize="@dimen/details_size"
+                                    android:text="$200/week"
+                                    />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    <android.support.design.widget.FloatingActionButton
+                        android:id="@+id/fab_invisible_main"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_anchor="@id/legend"
+                        app:fabSize="normal"
+                        app:srcCompat="@android:drawable/ic_dialog_email"
+                        android:layout_margin="@dimen/fab_margin"
+                        app:layout_anchorGravity="bottom|end" />
+
+
+                </android.support.design.widget.CoordinatorLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

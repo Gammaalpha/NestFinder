@@ -31,20 +31,18 @@ public class LatLong {
 
     private String address;
     private Address myAddress;
-    private Double lat;
-    private Double lng;
+    private ConversionCallback conversionCallback;
     public LatLong(){
 
     }
     public LatLong(Address myAddress){
         this.myAddress=myAddress;
     }
-    public String createAddress(){
+    public void createAddress(){
 
-        address =myAddress.getStreetNumber() + "+" +myAddress.getStreetName() + ",+"
+        address = myAddress.getAddress() + ",+"
                 + myAddress.getCity()+ ",+"+ myAddress.getProvince();
 
-        return address;
     }
 
     public String createURL() throws UnsupportedEncodingException{
@@ -52,7 +50,8 @@ public class LatLong {
         return geocode + urladdress + "&key"+google_maps_key;
     }
 
-    public void execute() throws UnsupportedEncodingException {
+    public void execute(ConversionCallback conversionCallback) throws UnsupportedEncodingException {
+        this.conversionCallback = conversionCallback;
         new requestAddressToGoogle().execute(createURL());
 
     }
@@ -78,10 +77,8 @@ public class LatLong {
                     buffer.append(line+"\n");
                 }
                 //Log.e(TAG, "Response from url: " + buffer.toString());
-                JSONParser(buffer.toString());
+                conversionCallback.setlatlongobj(JSONParser(buffer.toString()));
 
-
-                return buffer.toString();
             } catch (MalformedURLException e) {
                 e.printStackTrace();
             } catch (IOException e) {
@@ -92,26 +89,18 @@ public class LatLong {
             return null;
         }
 
-        @Override
-        protected void onPostExecute(String s) {
-
-        }
     }
-    private void JSONParser (String s) throws JSONException {
+    private LatLongObj JSONParser (String s) throws JSONException {
 
         JSONObject myJSONObject = new JSONObject(s);
         JSONObject mylocation = myJSONObject.getJSONArray("results").getJSONObject(0).
                 getJSONObject("geometry").getJSONObject("location");
-        lat = mylocation.getDouble("lat");
-        lng =mylocation.getDouble("lng");
+
+
+        return new LatLongObj(mylocation.getDouble("lat"), mylocation.getDouble("lng"));
+
     }
 
-    public Double latitude(){
-        return lat;
-    }
-    public Double longitude(){
-        return lng;
-    }
 
 
 }

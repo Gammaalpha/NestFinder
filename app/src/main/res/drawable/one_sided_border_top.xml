@@ -8,7 +8,6 @@
     <item android:top="2dp">
         <shape android:shape="rectangle">
             <solid android:color="@color/purple" />
-            <padding android:top="10dp"/>
         </shape>
     </item>
 </layer-list>

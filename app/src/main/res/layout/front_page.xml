@@ -67,72 +67,72 @@
             </android.support.design.widget.CollapsingToolbarLayout>
         </android.support.design.widget.AppBarLayout>
 
-        <FrameLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_anchor="@id/app_bar"
-            android:layout_gravity="bottom|end">
-
-
-
-        </FrameLayout>
-
-
-        <android.support.design.widget.FloatingActionButton
-            android:id="@+id/generalTool"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/fab_margin"
-            app:layout_anchor="@id/app_bar"
-            app:useCompatPadding="true"
-            app:fabSize="normal"
-            app:layout_anchorGravity="bottom|end"
-            app:srcCompat="@android:drawable/ic_dialog_email" />
+           <android.support.design.widget.FloatingActionButton
+                android:id="@+id/fab_invisible_main"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|end"
+                android:layout_margin="@dimen/fab_margin"
+                android:visibility="invisible"
+                app:layout_anchor="@id/app_bar"
+                app:layout_anchorGravity="bottom|end" />
 
         <android.support.design.widget.FloatingActionButton
-            android:id="@+id/fab_invisible"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="top|end"
-            android:layout_margin="@dimen/fab_margin"
-            android:visibility="invisible"
-            app:layout_anchor="@id/generalTool"
-            app:layout_anchorGravity="top" />
+                android:id="@+id/generalTool"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/fab_margin"
+                app:layout_anchor="@id/fab_invisible_main"
+                app:useCompatPadding="true"
+                app:fabSize="normal"
+                app:elevation="6dp"
+                app:layout_anchorGravity="top"
+                app:srcCompat="@drawable/create_ad_next_button" />
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/fab_invisible"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|end"
+                android:layout_margin="@dimen/fab_margin"
+                android:visibility="invisible"
+                app:layout_anchor="@id/generalTool"
+                app:layout_anchorGravity="top" />
 
 
-        <android.support.design.widget.FloatingActionButton
-            android:id="@+id/centerLocation"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_anchor="@id/fab_invisible"
-            app:useCompatPadding="true"
-            app:fabSize="mini"
-            app:layout_anchorGravity="center|end"
-            android:layout_marginRight="16dp"
-            app:srcCompat="@android:drawable/ic_dialog_email" />
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/centerLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_anchor="@id/fab_invisible"
+                app:useCompatPadding="true"
+                app:fabSize="mini"
+                app:layout_anchorGravity="center|end"
+                android:layout_marginRight="16dp"
+                app:srcCompat="@android:drawable/ic_dialog_email" />
 
 
-        <android.support.design.widget.FloatingActionButton
-            android:id="@+id/fab_invisible2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="top|end"
-            android:layout_margin="@dimen/fab_margin"
-            android:visibility="invisible"
-            app:layout_anchor="@id/centerLocation"
-            app:layout_anchorGravity="top" />
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/fab_invisible2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|end"
+                android:layout_margin="@dimen/fab_margin"
+                android:visibility="invisible"
+                app:layout_anchor="@id/fab_invisible"
+                app:layout_anchorGravity="top" />
 
-        <android.support.design.widget.FloatingActionButton
-            android:id="@+id/createListing"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_anchor="@id/fab_invisible2"
-            app:layout_anchorGravity="center|end"
-            app:fabSize="mini"
-            android:layout_marginRight="16dp"
-            app:useCompatPadding="true"
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/createListing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_anchor="@id/fab_invisible2"
+                app:layout_anchorGravity="center|end"
+                app:fabSize="mini"
+                android:layout_marginRight="16dp"
+                app:useCompatPadding="true"
 
-            app:srcCompat="@android:drawable/ic_dialog_email" />
+                app:srcCompat="@android:drawable/ic_dialog_email" />
 
 
         <include layout="@layout/front_page_listview" />

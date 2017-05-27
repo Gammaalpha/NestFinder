@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:weightSum="1"
+    >
+    <ImageView
+        android:id="@+id/ivCamera"
+        android:layout_width="126dp"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_weight=".3"
+
+        android:src="@android:drawable/ic_menu_camera" />
+
+    <ImageView
+        android:id="@+id/ivGallery"
+        android:layout_width="126dp"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_weight=".3"
+        android:src="@android:drawable/ic_menu_gallery" />
+
+    <android.support.v17.leanback.widget.HorizontalGridView
+        android:id="@+id/gridView"
+        android:layout_width="wrap_content"
+        android:background="@drawable/one_sided_border_top_no_color"
+        android:layout_height="0dp"
+        android:layout_weight=".35"
+             />
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Post Ad"
+        android:id="@+id/upload"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:textColor="@color/white"
+        android:background="@drawable/create_ad_next_button"
+        android:backgroundTint="@color/lightpurple"
+        android:layout_below="@+id/remember_me"
+        />
+
+
+
+</LinearLayout>

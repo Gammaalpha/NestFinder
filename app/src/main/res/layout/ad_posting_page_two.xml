@@ -4,7 +4,7 @@
     android:background="@color/white"
     android:layout_height="match_parent">
 
-
+    <!--
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -14,7 +14,10 @@
         android:textAlignment="center"
         android:layout_gravity="center"
         android:layout_marginTop="20dp"
+        android:typeface="serif"
+
         android:textColor="@color/black"/>
+        -->
 
     <!-- text hints possibly needs to be localized -->
     <EditText
@@ -24,14 +27,13 @@
         android:hint="@string/ad_address"
         android:layout_gravity="center"
         android:textColor="@color/black"
-        android:paddingLeft="10dp"
+        android:paddingLeft="@dimen/text_view_padding_left"
         android:textColorHint="@color/darkgray"
-        android:layout_marginRight="10dp"
-        android:layout_marginLeft="10dp"
-
+        android:layout_marginRight="@dimen/text_view_margin_right"
+        android:layout_marginLeft="@dimen/text_view_margin_left"
         android:background="@drawable/one_sided_border_editfield"
         android:id="@+id/adAddress"
-        android:layout_marginTop="45dp"
+        android:layout_marginTop="55dp"
         android:layout_centerHorizontal="true" />
 
 
@@ -42,10 +44,10 @@
         android:hint="@string/ad_postal_code"
         android:layout_gravity="center"
         android:textColor="@color/black"
-        android:paddingLeft="10dp"
+        android:paddingLeft="@dimen/text_view_padding_left"
         android:textColorHint="@color/darkgray"
-        android:layout_marginRight="10dp"
-        android:layout_marginLeft="10dp"
+        android:layout_marginRight="@dimen/text_view_margin_right"
+        android:layout_marginLeft="@dimen/text_view_margin_left"
         android:background="@drawable/one_sided_border_editfield"
         android:id="@+id/adPostalCode"
         android:layout_marginTop="85dp"
